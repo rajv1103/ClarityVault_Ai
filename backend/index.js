@@ -11,8 +11,7 @@ const PORT = process.env.PORT || 3000;
 // CORS: allow all origins (for development/debugging)
 app.use(helmet()); // Security headers
 app.use(cors({
-  origin: '*',
-  credentials: true,
+  origin: '*'
 }));
 app.use(morgan('combined')); // Logging
 app.use(express.json({ limit: '10mb' })); // Parse JSON bodies
